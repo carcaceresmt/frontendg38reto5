@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Productos</title>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Empresa XYZ</a>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="guardar.html">Guardar Departamento</a>
+          </li>          
+        </ul>
+      </nav>
+    <div class="container mt-5">
+            <h1 class="text-center mb-3">Listado de Departamentos</h1>
+            <a href="guardar.html" class="btn btn-success mt-3 mb-3">Nuevo Departamento</a>
+            <table class="table table-striped text-center">              
+                <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Departamento
+                        </th>
+                        <th>
+                            StartDate
+                        </th>
+                        <th>
+                            EndDate
+                        </th>
+                        <th>
+                            Acción
+                        </th>
+                    </tr>  
+                </thead>
+                <tbody id="tbody">                    
+
+                </tbody>
+
+            </table>
+
+    </div>
+
+  
+    <!--MODAL EDITAR-->
+      <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <!--  <h4 class="modal-title">Modal Heading</h4>-->
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div id="alerta" class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" >&times;</button>
+                <strong>Mensaje</strong> <span id="mensaje"></span>
+            </div>
+             
+            <h1 class="text-center mb-4">Editar Departamento</h1>
+             <label><strong>Id Departamento</strong></label>
+            <input type="text" id="id_dep" class="form-control mb-3">
+            <label><strong>Departamento</strong></label>
+            <input type="text" id="nomdep" class="form-control mb-3" >
+            <label><strong>StartDate</strong></label>
+            <input type="datetime-local" class="form-control mb-3" id="startDate">
+            <label><strong>EndDate</strong></label>
+            <input type="datetime-local" class="form-control mb-3" id="endDate">
+            <button id="guardar" class="btn btn-primary btn-block">Guardar</button>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    <script src="assets/js/crud.js"></script>
+</body>
+</html>
